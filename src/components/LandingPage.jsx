@@ -11,11 +11,7 @@ export default function LandingPage() {
           <button className="shop--now--link">Shop now</button>
         </Link>
       </span>
-      <img
-        src="../src/assets/landing-page.jpg"
-        alt=""
-        className="landing--image"
-      />
+      <img src="./public/landing-page.jpg" alt="" className="landing--image" />
     </div>
   );
 }
