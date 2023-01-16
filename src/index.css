@@ -1,11 +1,18 @@
 html,
-body {
+body,
+#root {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+.app {
+  height: 100%;
 }
 
 .header {
-  padding: 0 1.2em;
+  padding: 0 1.3em;
+  height: 13%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,4 +45,41 @@ a:visited {
   -o-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+/* LANDING PAGE */
+
+.landingPage {
+  display: flex;
+  justify-content: space-between;
+
+  height: 87%;
+  /* box-sizing: border-box; */
+  /* height: 100%;
+  width: 100%; */
+}
+
+.landing--image {
+  width: 60%;
+  object-fit: cover;
+}
+
+.landingPage span {
+  align-self: center;
+  padding-left: 2em;
+}
+
+.shop--now--link {
+  background-color: #1c6758;
+  color: white;
+  padding: 0.7em 0.7em;
+  border-radius: 60px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border: none;
+}
+
+.shop--now--link:hover {
+  opacity: 0.85;
+  cursor: pointer;
 }

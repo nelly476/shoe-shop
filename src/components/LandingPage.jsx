@@ -1,10 +1,21 @@
+import { Link } from "react-router-dom";
+
 export default function LandingPage() {
   return (
-    <>
-      <h1>
-        BEST SHOES. <br /> FOR YOU.
-      </h1>
-      <img src=".." alt="" />
-    </>
+    <div className="landingPage">
+      <span>
+        <h1>
+          BEST SHOES. <br /> FOR YOU.
+        </h1>
+        <Link to="/products">
+          <button className="shop--now--link">Shop now</button>
+        </Link>
+      </span>
+      <img
+        src="./src/assets/landing-page.jpg"
+        alt=""
+        className="landing--image"
+      />
+    </div>
   );
 }
