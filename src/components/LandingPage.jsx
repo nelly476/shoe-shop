@@ -12,7 +12,7 @@ export default function LandingPage() {
         </Link>
       </span>
       <img
-        src="./src/assets/landing-page.jpg"
+        src="../src/assets/landing-page.jpg"
         alt=""
         className="landing--image"
       />
