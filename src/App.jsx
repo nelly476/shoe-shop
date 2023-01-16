@@ -4,6 +4,8 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
+import Products from "./components/Products";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/products"></Route>
-        <Route path="/contact"></Route>
+        <Route path="/products" element={<Products />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </div>
   );
