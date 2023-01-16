@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <div className="header">
       <h1>
-        <Link to="/">ShoeLoves</Link>
+        <Link to="/" className="brand--name">
+          ShoeLoves
+        </Link>
       </h1>
       <div className="header--left">
         <h1>
@@ -15,6 +17,11 @@ export default function Header() {
         </h1>
         <h1>
           <Link to="/contact">Contact</Link>
+        </h1>
+        <h1>
+          <Link to="/cart">
+            <i className="fa-solid fa-cart-shopping"></i>
+          </Link>
         </h1>
       </div>
     </div>
