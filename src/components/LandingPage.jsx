@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import landingImage from "../assets/landing-page.jpg";
 
 export default function LandingPage() {
   return (
@@ -11,7 +12,7 @@ export default function LandingPage() {
           <button className="shop--now--link">Shop now</button>
         </Link>
       </span>
-      <img src="./public/landing-page.jpg" alt="" className="landing--image" />
+      <img src={landingImage} alt="" className="landing--image" />
     </div>
   );
 }
