@@ -10,6 +10,10 @@ body,
   height: 100%;
 }
 
+/* img {
+  max-width: 100%;
+} */
+
 .header {
   padding: 0 1.3em;
   height: 13%;
@@ -66,7 +70,9 @@ a:visited {
 
 .landingPage span {
   align-self: center;
-  padding-left: 2em;
+  /* padding: 0 auto; */
+  width: 40%;
+  text-align: center;
 }
 
 .shop--now--link {
@@ -82,4 +88,29 @@ a:visited {
 .shop--now--link:hover {
   opacity: 0.85;
   cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+.main-container img {
+  width: 50%;
+}
+
+.main-container form {
+  width: 100%;
+}
+
+/* PRODUCT SECTION STYLING */
+
+img {
+  width: 18em;
+  object-fit: cover;
+  height: 18em;
+}
+
+.object--fit {
+  object-position: right;
 }

@@ -1,3 +1,10 @@
+import data from "../data";
+import Product from "./Product";
+
 export default function Products() {
-  return <div></div>;
+  const productsElem = data.map((item) => {
+    return <Product info={item} key={item.id} />;
+  });
+
+  return <div>{productsElem}</div>;
 }
