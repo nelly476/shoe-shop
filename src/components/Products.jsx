@@ -6,5 +6,5 @@ export default function Products() {
     return <Product info={item} key={item.id} />;
   });
 
-  return <div>{productsElem}</div>;
+  return <div className="products--page">{productsElem}</div>;
 }
