@@ -19,9 +19,7 @@ export default function Header() {
           <Link to="/contact">Contact</Link>
         </h1>
         <h1>
-          <Link to="/cart">
-            <i className="fa-solid fa-cart-shopping"></i>
-          </Link>
+          <i className="fa-solid fa-cart-shopping"></i>
         </h1>
       </div>
     </div>

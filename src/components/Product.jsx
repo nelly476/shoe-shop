@@ -1,8 +1,10 @@
-export default function Product(props) {
-  //   console.log(props.info);
-  const { id, name, price, img } = props.info;
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
-  //   console.log(img);
+export default function Product(props) {
+  const { id, name, price, img } = props.info;
+  const { changeCart } = useContext(CartContext);
+
   return (
     <div className="product--section">
       <img
@@ -13,7 +15,7 @@ export default function Product(props) {
       <h2>{name}</h2>
       <span className="price--cart--section">
         <p>{price}</p>
-        <button>Add to cart</button>
+        <button onClick={() => changeCart(id)}>Add to cart</button>
       </span>
     </div>
   );

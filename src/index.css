@@ -33,7 +33,8 @@ button:hover {
   column-gap: 4em;
 }
 
-a:link {
+a:link,
+i {
   color: #eef2e6;
   text-decoration: none;
 }
