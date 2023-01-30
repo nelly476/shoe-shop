@@ -1,6 +1,12 @@
+import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
-export default function Header() {
+export default function Header(props) {
+  const { cartItems } = useContext(CartContext);
+  const { openCart } = props;
+
   return (
     <div className="header">
       <h1>
@@ -8,20 +14,20 @@ export default function Header() {
           ShoeLoves
         </Link>
       </h1>
-      <div className="header--left">
-        <h1>
+      <ul className="header--left">
+        <li>
           <Link to="/">Home</Link>
-        </h1>
-        <h1>
+        </li>
+        <li>
           <Link to="/products">Products</Link>
-        </h1>
-        <h1>
+        </li>
+        <li>
           <Link to="/contact">Contact</Link>
-        </h1>
-        <h1>
+        </li>
+        <li onClick={openCart}>
           <i className="fa-solid fa-cart-shopping"></i>
-        </h1>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }
