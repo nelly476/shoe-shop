@@ -16,6 +16,16 @@ button:hover,
   cursor: pointer;
 }
 
+button {
+  width: 60%;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  padding: 0.7em;
+}
+
 .header {
   padding: 0 1.3em;
   height: 13%;
@@ -81,9 +91,13 @@ a:visited {
   box-shadow: -6px 0px 10px -5px rgba(34, 60, 80, 0.47);
 }
 
-/* .cart--modal h1 {
-  text-align: center;
-} */
+.button--container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  width: 100%;
+  align-items: center;
+}
 
 .checkout--btn {
   background-color: #1c6758;
@@ -178,25 +192,15 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 75%; */
+  width: 90%;
   column-gap: 1em;
 }
 
 .price--cart--section p {
-  width: 20%;
+  width: 15%;
   text-align: center;
   font-size: larger;
   margin: 0;
-}
-
-button {
-  width: 8em;
-  color: white;
-  font-weight: bolder;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  border: none;
-  padding: 0.7em 0.9em;
 }
 
 .add--to--cart {

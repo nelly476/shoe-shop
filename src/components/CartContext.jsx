@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import data from "../data";
 
 const CartContext = React.createContext();
 
@@ -8,9 +9,9 @@ function CartContextProvider(props) {
 
   function changeCart(id) {
     setCartItems((prev) => {
-      return [...prev, id];
+      const target = data.filter((item) => item.id === id)[0];
+      return [...prev, target];
     });
-    console.log(cartItems);
   }
 
   return (
