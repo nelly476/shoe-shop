@@ -12,7 +12,11 @@ export default function CartModal(props) {
     if (cartItems.length > 0) {
       setCartElem(
         cartItems.map((item) => {
-          return <MiniProductCard item={item} key={item.id} />;
+          return item.numberOfProducts === 0 ? (
+            ""
+          ) : (
+            <MiniProductCard item={item} key={item.id} />
+          );
         })
       );
       setTotal(

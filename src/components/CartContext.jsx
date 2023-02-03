@@ -7,7 +7,7 @@ const CartContext = React.createContext();
 function CartContextProvider(props) {
   const [cartItems, setCartItems] = useState("");
 
-  function changeCart(id) {
+  function addToCart(id) {
     setCartItems((prev) => {
       const target = data.filter((item) => item.id === id)[0];
       target.numberOfProducts = 1;
@@ -23,12 +23,15 @@ function CartContextProvider(props) {
           : item;
       });
     });
-    // console.log(cartItems.length);
+    setCartItems((prev) => {
+      return prev.filter((item) => item.numberOfProducts !== 0);
+    });
+    // console.log(cartItems);
   }
 
   return (
     <CartContext.Provider
-      value={{ cartItems, setCartItems, changeCart, changeNumberOfProducts }}
+      value={{ cartItems, setCartItems, addToCart, changeNumberOfProducts }}
     >
       {props.children}
     </CartContext.Provider>

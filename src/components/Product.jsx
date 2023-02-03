@@ -4,14 +4,21 @@ import { CartContext } from "./CartContext";
 
 export default function Product(props) {
   const { id, name, price, img } = props.info;
-  const { changeCart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const [addedToCart, setAddedToCart] = useState(false);
 
-  function addToCart(id) {
-    changeCart(id);
-    setAddedToCart(true);
+  function changeButton(id) {
+    addToCart(id);
+
+    // setAddedToCart(
+    //   cartItems.forEach((item) => {
+    //     return item.id === id ? true : false;
+    //   })
+    // );
   }
+
+  // console.log(cartItems.includes)
 
   return (
     <div className="product--card">
@@ -22,12 +29,12 @@ export default function Product(props) {
       />
       <h2>{name}</h2>
       <span className="price--cart--section">
-        <p>{price}</p>
+        <p>${price}</p>
 
         {addedToCart ? (
           <button className="remove--button">Open cart</button>
         ) : (
-          <button className="add--to--cart" onClick={() => addToCart(id)}>
+          <button className="add--to--cart" onClick={() => changeButton(id)}>
             Add to cart
           </button>
         )}
