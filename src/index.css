@@ -109,6 +109,10 @@ a:visited {
   background-color: #e14d2a;
 }
 
+.cart--modal h2 {
+  margin: 0;
+}
+
 /* MINI PRODUCT CARD */
 
 .mini--product--card {

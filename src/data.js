@@ -7,25 +7,25 @@ const data = [
   {
     id: 1,
     name: "Nike Aiforce 1 shadow",
-    price: "$105.99",
+    price: 105.99,
     img: img1,
   },
   {
     id: 2,
     name: "White Adidas Low-top",
-    price: "$105.99",
+    price: 105.99,
     img: img2,
   },
   {
     id: 3,
     name: "Nike SuperRep Go",
-    price: "$105.99",
+    price: 105.99,
     img: img3,
   },
   {
     id: 4,
     name: "New Balance 997H Grey Day",
-    price: "$105.99",
+    price: 105.99,
     img: img4,
   },
 ];
