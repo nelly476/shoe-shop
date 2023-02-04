@@ -29,6 +29,9 @@ export default function CartModal(props) {
           }, 0)
           .toFixed(2)
       );
+    } else {
+      setCartElem("");
+      setTotal(0.0);
     }
   }, [cartItems]);
 

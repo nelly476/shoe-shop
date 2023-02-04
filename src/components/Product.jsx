@@ -1,24 +1,20 @@
 import { useState } from "react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "./CartContext";
 
 export default function Product(props) {
   const { id, name, price, img } = props.info;
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, cartItems } = useContext(CartContext);
 
   const [addedToCart, setAddedToCart] = useState(false);
 
-  function changeButton(id) {
-    addToCart(id);
-
-    // setAddedToCart(
-    //   cartItems.forEach((item) => {
-    //     return item.id === id ? true : false;
-    //   })
-    // );
-  }
-
-  // console.log(cartItems.includes)
+  useEffect(() => {
+    if (cartItems.length > 0) {
+      setAddedToCart(cartItems.find((item) => item.id === id));
+    } else {
+      setAddedToCart(false);
+    }
+  }, [cartItems]);
 
   return (
     <div className="product--card">
@@ -34,7 +30,7 @@ export default function Product(props) {
         {addedToCart ? (
           <button className="remove--button">Open cart</button>
         ) : (
-          <button className="add--to--cart" onClick={() => changeButton(id)}>
+          <button className="add--to--cart" onClick={() => addToCart(id)}>
             Add to cart
           </button>
         )}
