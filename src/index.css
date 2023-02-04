@@ -152,10 +152,6 @@ a:visited {
   justify-content: center;
 }
 
-/* .mini--name--price h3 {
-  margin-top: 0;
-} */
-
 .mini--name--price p,
 .mini--name--price h3 {
   font-size: 1.2rem;
@@ -279,4 +275,18 @@ a:visited {
 
 .remove--button {
   background-color: #1c6758;
+}
+
+/* CONTACT */
+
+.contact--container {
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+.fa-brands {
+  color: black;
+  font-size: 6rem;
+  margin: 0.3em;
 }
