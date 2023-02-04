@@ -18,9 +18,8 @@ function App() {
   return (
     <div className="app">
       <Header openCart={openCart} />
-      {cartClicked && (
-        <CartModal cartClicked={cartClicked} openCart={openCart} />
-      )}
+
+      <CartModal cartClicked={cartClicked} openCart={openCart} />
 
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>

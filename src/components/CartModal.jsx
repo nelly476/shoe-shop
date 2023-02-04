@@ -36,7 +36,7 @@ export default function CartModal(props) {
   }, [cartItems]);
 
   return (
-    <span className="cart--modal">
+    <span className={!cartClicked ? "cart--modal hidden" : "cart--modal"}>
       <h1>Your shopping cart</h1>
       {cartElem}
       <h2>Total: ${total}</h2>
