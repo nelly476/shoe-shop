@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
@@ -9,6 +9,18 @@ import Contact from "./components/Contact";
 import CartModal from "./components/CartModal";
 
 function App() {
+  useEffect(() => {
+    (async function t() {
+      let res = await fetch("https://opentdb.com/api.php?amount=10");
+      let data = await res.json();
+      console.log(data.results);
+    })();
+
+    // fetch("https://opentdb.com/api.php?amount=10")
+    //   .then((res) => res.json())
+    //   .then((data) => console.log(data.results));
+  }, []);
+
   const [cartClicked, setCartClicked] = useState(false);
 
   function openCart() {
